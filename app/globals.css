@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-surface-50 text-surface-800 antialiased;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-sm border border-surface-200/60 rounded-2xl shadow-sm;
+  }
+  
+  .metric-card {
+    @apply bg-white rounded-2xl border border-surface-200/60 p-6 shadow-sm hover:shadow-md transition-all duration-300;
+  }
+  
+  .priority-high {
+    @apply bg-red-50 text-red-700 border-red-200;
+  }
+  
+  .priority-medium {
+    @apply bg-amber-50 text-amber-700 border-amber-200;
+  }
+  
+  .priority-low {
+    @apply bg-green-50 text-green-700 border-green-200;
+  }
+}
